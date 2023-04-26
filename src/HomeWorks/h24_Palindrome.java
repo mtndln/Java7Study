@@ -12,14 +12,26 @@ PS. A palindrome is a word, number, phrase, or other sequence of characters whic
          */
 
 
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter a String");
-        String str = scan.nextLine();
-        String reversed = "";
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("Enter a word for checking :");
+        String word1 =scan1.nextLine();
+        String newword="";
+        char ch;
 
-        for (int i = str.length()-1; i >=0 ; i--) {
-            reversed = reversed +str.charAt(i);
+        for (int i = 0; i <word1.length() ; i++) {
+            ch=word1.charAt(i);
+            newword = ch+newword;
+
         }
-        System.out.println("The reversed string is: "+reversed);
+        if (newword.equals(word1)){
+            System.out.println(word1+" is a palindrome word");
+        }else {
+            System.out.println(word1 + " is not a palindrome word");
+        }
     }
-}
+    }
+
+
+
+
+
